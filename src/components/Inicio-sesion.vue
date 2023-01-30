@@ -1,65 +1,83 @@
 <script setup>
 import { ref } from 'vue'
-import { auth } from '../firebase';
-import { createUserWithEmailAndPassword, GoogleAuthProvider, signInWithPopup } from 'firebase/auth';
-var iniciar = ref(true);
-var usuario = ref("");
-var contraseña = ref("");
+import { auth } from '../firebase.js'
+import { createUserWithEmailAndPassword, signInWithEmailAndPassword, GoogleAuthProvider, signInWithPopup } from "firebase/auth";
 
-function alta(){
-      createUserWithEmailAndPassword(auth,usuario.value,contraseña.value)
-      .then((userCredential) => {
-            const user = userCredential.user;
-      })
-      .catch((error) => {
-            const errorCode = error.code;
-            const errorMessage = error.message;
-      })
+var usuario = ref(""), contraseña = ref("");
+
+function altaUsuario(){
+    createUserWithEmailAndPassword(auth, usuario.value, contraseña.value)
+    .then((userCredential) => {
+        // Signed in 
+        const user = userCredential.user;
+        alert ("Usuario creado");
+        window.location.href = "/";
+        // ...
+    })
+    .catch((error) => {
+        const errorCode = error.code;
+        const errorMessage = error.message;
+        // ..
+    });
 }
 
-function cambiarRegistrarse() {
-      iniciar.value = false;
+function iniciarSesion(){
+    signInWithEmailAndPassword(auth, usuario.value, contraseña.value)
+    .then((userCredential) => {
+        // Signed in
+        const user = userCredential.user;
+        alert ("Sesión iniciada, bienvenido");
+        window.location.href = "/";
+        // ...
+    })
+    .catch((error) => {
+        const errorCode = error.code;
+        const errorMessage = error.message;
+    });
 }
 
-function cambiarIniciar() {
-      iniciar.value = true;
+function googleSesion(){
+    signInWithPopup(auth, new GoogleAuthProvider())
+    .then((result) => {
+        // This gives you a Google Access Token. You can use it to access the Google API.
+        const credential = GoogleAuthProvider.credentialFromResult(result);
+        const token = credential.accessToken;
+        // The signed-in user info.
+        const user = result.user;
+        alert ("Sesión iniciada con Google");
+        window.location.href = "/";
+        // ...
+    }).catch((error) => {
+        // Handle Errors here.
+        const errorCode = error.code;
+        const errorMessage = error.message;
+        // The email of the user's account used.
+        const email = error.email;
+        // The AuthCredential type that was used.
+        const credential = GoogleAuthProvider.credentialFromError(error);
+        // ...
+    });
+}
+
+function cerrarSesion(){
+    auth.signOut().then(() => {
+        // Sign-out successful.
+        alert ("Sesión cerrada");
+        window.location.href = "/";
+    }).catch((error) => {
+        // An error happened.
+    });
 }
 </script>
 
 <template>
-<section v-if="iniciar" class="contenedor-login">
-      <section class="iniciar">
-            <h1 class="titulo-inicio titulo">Inicio de sesión</h1>
-            <form action="">
-                  <input type="text" class="usuario" placeholder="escriba su usuario" v-model="usuario" required>
-                  <input type="password" class="contraseña" placeholder="escriba su contraseña" v-model="contraseña" required>
-                  <input type="submit" @click="alta" class="subcribirse" id="iniciar-sesion" value="iniciar sesión">
-            </form>
-      </section>
-      <section class="registrarse">
-            <div class="cambiar-registrarse" @click="cambiarRegistrarse()">
-                  <h1 class="cambiar hover">Registrarse</h1>
-            </div>
-      </section>
-</section>
-<section v-else class="contenedor-login">
-      <section class="iniciar">
-            <div class="cambiar-iniciar" @click="cambiarIniciar()">
-                  <h1 class="cambiar hover">Iniciar sesión</h1>
-            </div>
-      </section>
-      <section class="registrarse">
-            <h1 class="titulo-inicio titulo">Registrarse</h1>
-            <form action="">
-                  <input type="text" class="usuario" placeholder="escriba su usuario" required>
-                  <input type="text" class="nombre" placeholder="escriba su nombre" required>
-                  <input type="text" class="apellidos" placeholder="escriba sus apellidos" required>
-                  <input type="tel" class="telefono" placeholder="escriba su telefono" required>
-                  <input type="email" class="correo" placeholder="escriba su correo" required>
-                  <input type="password" class="contraseña" placeholder="escriba su contraseña" required>
-                  <input type="password" class="repetir-contraseña" placeholder="repita su contraseña" required>
-                  <input type="submit" class="subcribirse" id="registrarse" value="registrarse">
-            </form>
-      </section>
-</section>
+    <section class="contenedor-login">
+        <br />
+        email: <input type="text" v-model="usuario"><br />
+        contraseña: <input type="password" v-model="contraseña"><br />
+        <button @click="altaUsuario">Darse de alta</button>
+        <button @click="iniciarSesion">Iniciar Sesion</button>
+        <button @click="googleSesion">Iniciar Sesion con Google</button>
+        <button @click="cerrarSesion">Cerrar Sesion</button>
+    </section>
 </template>

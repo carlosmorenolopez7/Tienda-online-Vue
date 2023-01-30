@@ -14,8 +14,13 @@ function filtrarProductos(productos){
       <section class='vistas categoria'>
             <section class='cabecera'>
                   <h1 class="titulo-seccion">Electronica</h1>
-                  <span class="ordenar ascendente">Ascendente</span>
-                  <span class="ordenar descendente">Descendente</span>
+                  <div class="ordenar">
+                        <span>Ordenar: </span>
+                        <select class="order">
+                        <option value="asc">Hacia arriba</option>
+                        <option value="desc">Hacia abajo</option>
+                        </select>
+                  </div>
             </section>
             <section class='productos'>
                   <productocomponente v-for="producto in filtrarProductos(productos)" :producto="producto"></productocomponente>

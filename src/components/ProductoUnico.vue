@@ -19,10 +19,8 @@ function enviarAlCArrito(){
             <div class="contenendor-imagen-producto-unico">
                   <img class="imagen-producto-unico" :src="producto.imagen">
             </div>
-            <h3 class="categoria-producto-unico">{{producto.categoria}}</h3>
             <p class="descripcion-producto-unico">{{producto.descripcion}}</p>
             <p class="precio-producto-unico">{{producto.precio}}</p>
-            <div class="rating-producto-unico">Votos: {{producto.votos}} Rating: {{producto.rating}}</div>
             <div class="caracteristicas-producto-unico">
                   <div class="contenendor-cantidad-producto-unico">
                         <span>Cantidad: </span>
@@ -37,7 +35,6 @@ function enviarAlCArrito(){
                   <div class="contenendor-talla-producto-unico">
                         <span>Talla: </span>
                         <select class="talla-producto-unico" name="talla">
-                              <option value="xs">XS</option>
                               <option value="s">S</option>
                               <option value="m">M</option>
                               <option value="l">L</option>

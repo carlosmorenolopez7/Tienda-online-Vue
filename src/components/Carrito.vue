@@ -14,10 +14,7 @@ function borrarCarrito(){
 </script>
 
 <template>
-<div v-if="!carrito" class='carrito-nulo'>
-      <h1>No hay productos en el carrito</h1>
-</div>
-<section v-else class="contenedor-carrito">
+<section class="contenedor-carrito">
       <div class="carrito-titulo">
             <h1>Su Carrito</h1>
       </div>
@@ -30,16 +27,16 @@ function borrarCarrito(){
                         <div class="suma-carrito">
                               <section class="subtotal-carrito-contenedor">
                                     <span class="subtotal">Subtotal</span>
-                                    <span class="euro">${this.usuario_activo.carrito.subtotal}€</span>
+                                    <span class="euro" value="${carrito.subtotal}">€</span>
                               </section>
                               <section class="gastos-carrito-contenedor">
                                     <span class="gastos">Gastos</span>
-                                    <span class="euro">${this.usuario_activo.carrito.gastos_envio}€</span>
+                                    <span class="euro">10.99€</span>
                               </section>
                         </div>
                         <div class="total-carrito-contenedor">
                               <span class="total">Total</span>
-                              <span class="euro">${this.usuario_activo.carrito.total}€</span>
+                              <span class="euro" value="${ carrito.total }">€</span>
                         </div>
                   </div>
                   <div class="opciones-carrito">

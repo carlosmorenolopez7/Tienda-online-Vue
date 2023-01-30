@@ -13,6 +13,38 @@ h1, h2, h3{
   font-family: Arial, Helvetica, sans-serif;
 }
 
+.section{
+  background-position: center;
+  background-size: contain;
+  display: flex;
+  align-items: center;
+  gap: 1.5em;
+  border: 1px solid black;
+}
+
+.section h2{
+  font-size: 1em;
+  position: relative;
+}
+
+.section h2::after{
+  content: "";
+  position: absolute;
+  width: 100%;
+  background-color: black;
+  height: .1em;
+  bottom: 0;
+  left: 0;
+}
+
+.section:hover{
+  color: lightblue;
+}
+
+.sectionImg img{
+  width: 50%
+}
+
 nav{
   list-style: none;
 }
@@ -37,7 +69,7 @@ input:not(input[type="submit"]):invalid{
 }
 
 input:not(input[type="submit"]):valid{
-  border-bottom: 1px solid rgb(0, 203, 0);
+  border-bottom: 1px solid green;
 }
 
 .titulo{
@@ -47,7 +79,7 @@ input:not(input[type="submit"]):valid{
 header{
   margin: auto;
   padding: 1em;
-  border-bottom: 2px solid black;
+  border-bottom: 1px solid black;
   grid-column: 2 / 4;
   grid-row: 1 / 2;
   text-align: center;
@@ -101,31 +133,20 @@ header>*{
   transition: all 1s;
 }
 
-main{
-  grid-column: 1 / -1;
-  grid-row: 2 / 3;
-}
-
-.principal{
-  display: grid;
-  grid-template-columns: 1fr;
-  grid-template-rows: repeat(5,fit-content);
-}
-
-.subcribirse, .finalizar-compra, .borrar-carrito{
+.finalizar-compra, .borrar-carrito{
   width: 120px;
   height: 40px;
-  background-color: #e0a96e;
-  border: 2px solid #000000;
+  background-color: lightblue;
+  border: 1px solid black;
   border-radius: 15px;
   cursor: pointer;
   font-weight: 600;
-  background-color: #fff;
+  background-color: white;
   transform: translate(2px, 2px);
   transition: all 0.5s ease;
 }
 
-#registrarse, .finalizar-compra, .borrar-carrito{
+.finalizar-compra, .borrar-carrito{
   width: 100%;
 }
 
@@ -177,6 +198,7 @@ main{
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: repeat(2,1fr);
+  border: 1px solid black;
 }
 
 .contenedor-imagen-producto,.contenedor-contenido-producto{
@@ -215,18 +237,17 @@ main{
 .ver{
   width: 100px;
   line-height: 29px;
-  background-color: #fff;
-  border: 1px solid #5c5f5f;
+  background-color: white;
+  border: 1px solid black;
   border-radius: 8px;
-  box-shadow: rgba(213, 217, 217, .5) 0 2px 5px 0;
+  box-shadow: grey;
   box-sizing: border-box;
   cursor: pointer;
   transition: all .2s;
 }
 
 .ver:hover {
-  background-color: rgba(131, 209, 209, 0.644);
-  transform: scale(1.2);
+  background-color: green;
 }
 
 .contenedor-producto{
@@ -292,13 +313,11 @@ main{
 }
 
 .comprar{
-  background-color: transparent;
   color: black;
+  border: 1px solid black;
   font-size: 20px;
   font-weight: 600;
-  border: none;
-  border-radius: 8px;
-  box-shadow: rgba(213, 217, 217, .5) 0 2px 5px 0;
+  border-radius: 10px;
   box-sizing: border-box;
   cursor: pointer;
   margin-top: 5%;
@@ -306,8 +325,12 @@ main{
 }
 
 .comprar:hover{
-  background-color: rgba(131, 209, 209, 0.644);
-  transform: scale(1.2);
+  background-color: green;
+}
+
+.comprar:active{
+  background-color: lightblue;
+  transform: scale(0.9);
 }
 
 .contenedor-carrito{
@@ -328,25 +351,6 @@ main{
   display: grid;
   grid-template-columns: 2fr 1fr;
   grid-column-gap: 10%;
-}
-
-.evento-realizado{
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  animation: aparecer 1s ;
-}
-
-.evento-realizado>div{
-  position: fixed;
-  bottom: 0;
-  text-align: center;
-  border: 2px solid black;
-  width: 30vw;
-  background-color: white;
-  height: 10vh;
-  text-align: center;
-  animation: aparecer 1s ;
 }
 
 .contenedor-productos-carrito{
@@ -391,6 +395,10 @@ main{
   grid-column: 8 / -1;
   grid-row: 1 / 2;
   justify-self: flex-end;
+}
+
+.borrar-carrito{
+  margin-top: 1em;
 }
 
 .imagen-eliminar{
@@ -441,56 +449,8 @@ main{
   margin-top: 2em;
 }
 
-.borrar-carrito{
-  margin-top: 1em;
-}
-
-.carrito-nulo{
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
 .contenedor-login{
   display: grid;
   grid-auto-flow: column;
-  justify-items: center;
-}
-
-.iniciar{
-  display: grid;
-  grid-template-rows: min-content;
-}
-
-.iniciar>form{
-  display: grid;
-  grid-template-rows: repeat(3,min-content);
-  row-gap: 1em;
-}
-
-.registrarse{
-  display: grid;
-  grid-template-rows: min-content;
-}
-
-.registrarse>form{
-  display: grid;
-  grid-auto-rows: min-content;
-  row-gap: 1em;
-}
-
-.cambiar-iniciar,.cambiar-registrarse{
-  display: grid;
-  grid-template-rows: repeat(3,1fr);
-}
-
-.cambiar{
-  grid-row: 2 / 3;
-  font-size: 40px;
-  transform: rotateX(360deg);
-}
-
-.cambiar:hover{
-  font-style: italic;
-  text-decoration: underline;
+  grid-column-gap: 3%;
 }
