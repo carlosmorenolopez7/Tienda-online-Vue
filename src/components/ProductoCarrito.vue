@@ -13,7 +13,7 @@ function eliminarProducto(producto,carrito){
             <img class="imagen-producto-carrito" :src="producto.imagen" :alt="producto.nombre">
       </div>
       <div class="contenedor-informacion-producto-carrito">
-            <h1 class="nombre-producto-carrito titulo">{{producto.nombre}} <!--({{producto.talla}})--></h1>
+            <h1 class="nombre-producto-carrito titulo">{{producto.nombre}}</h1>
             <div class="contenedor-imagen-eliminar hover" @click="eliminarProducto(producto,carrito)">
                   <img class="imagen-eliminar" src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/5f/Red_X.svg/1024px-Red_X.svg.png" alt="eliminar producto">
             </div>

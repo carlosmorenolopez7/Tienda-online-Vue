@@ -11,45 +11,37 @@ import inicio_sesion from '../components/Inicio-sesion.vue'
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
   routes: [
-    {
-      path: '/',
-      name: 'home',
-      component: home
+    {path: '/',
+    name: 'home',
+    component: home
     },
-    {
-      path: '/hombre',
-      name: 'hombre',
-      component: hombre
+    {path: '/hombre',
+    name: 'hombre',
+    component: hombre
     },
-    {
-      path: '/mujer',
-      name: 'mujer',
-      component: mujer
+    {path: '/mujer',
+    name: 'mujer',
+    component: mujer
     },
-    {
-      path: '/joyas',
-      name: 'joyas',
-      component: joyas
+    {path: '/joyas',
+    name: 'joyas',
+    component: joyas
     },
-    {
-      path: '/electronica',
-      name: 'electronica',
-      component: electronica
+    {path: '/electronica',
+    name: 'electronica',
+    component: electronica
     },
-    {
-      path: '/producto/:id?',
-      name: 'producto',
-      component: producto
+    {path: '/producto/:id?',
+    name: 'producto',
+    component: producto
     },
-    {
-      path: '/carrito',
-      name: 'carrito',
-      component: carrito
+    {path: '/carrito',
+    name: 'carrito',
+    component: carrito
     },
-    {
-      path: '/inicio-sesion',
-      name: 'inicio-sesion',
-      component: inicio_sesion
+    {path: '/inicio-sesion',
+    name: 'inicio-sesion',
+    component: inicio_sesion
     },
   ]
 })

@@ -15,7 +15,7 @@ function enviarAlCArrito(){
 <template>
 <div class="contenedor-producto">
       <section class="producto-unico">
-            <h1 class="nombre-producto-unico titulo">{{ producto.nombre }}</h1>
+            <h1 class="titulo-producto-unico">{{ producto.nombre }}</h1>
             <div class="contenendor-imagen-producto-unico">
                   <img class="imagen-producto-unico" :src="producto.imagen">
             </div>
