@@ -27,7 +27,7 @@ function borrarCarrito(){
                         <div class="suma_carrito">
                               <section class="subtotal_carrito_contenedor">
                                     <span class="subtotal">Subtotal</span>
-                                    <span class="precio" value="${carrito.subtotal}">€</span>
+                                    <span class="precio" value="${ carrito.subtotal }">€</span>
                               </section>
                               <section class="gastos_carrito_contenedor">
                                     <span class="gastos">Gastos</span>

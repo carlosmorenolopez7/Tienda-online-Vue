@@ -4,7 +4,24 @@ defineProps(['producto','carrito'])
 function eliminarProducto(producto,carrito){
       carrito.splice(carrito.indexOf(producto),1)
 }
+
+function aumentarCantidad(){
+      var cantidad = document.querySelector('.cantidad_productos').innerHTML;
+      cantidad++;
+      document.querySelector('.cantidad_productos').innerHTML = cantidad;
+}
+
+function disminuirCantidad(){
+      var cantidad = document.querySelector('.cantidad_productos').innerHTML;
+      while (cantidad == 0) {
+            cantidad = 0;
+      }
+      cantidad--;
+      document.querySelector('.cantidad_productos').innerHTML = cantidad;
+}
 </script>
+
+
 
 <template>
 <div class="producto_carrito">
@@ -17,9 +34,9 @@ function eliminarProducto(producto,carrito){
             <div class="eliminar_producto" @click="eliminarProducto(producto,carrito)">
                   <img class="imagen_eliminar" src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/5f/Red_X.svg/1024px-Red_X.svg.png" alt="">
             </div>
-            <span class="menos">_</span>
-            <span class="cantidad_productos">0</span>
-            <span class="mas">+</span>
+            <button class="menos" @click="disminuirCantidad">-</button>
+            <span class="cantidad_productos"></span>
+            <button class="mas" @click="aumentarCantidad">+</button>
             <span class="precio_productos">{{producto.precio}} </span>
       </div>
 </div>
