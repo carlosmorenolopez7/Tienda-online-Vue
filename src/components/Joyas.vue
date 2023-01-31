@@ -11,7 +11,7 @@ function filtrarProductos(productos){
 
 <template>
 <div class="contenedor_categorias">
-      <section class='vistas categoria'>
+      <section class='categoria'>
             <section class='cabecera'>
                   <h1 class="titulo_seccion">Joyas</h1>
                   <div class="ordenar">
