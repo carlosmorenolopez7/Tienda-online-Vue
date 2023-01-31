@@ -71,7 +71,7 @@ function cerrarSesion(){
 </script>
 
 <template>
-    <section class="contenedor-login">
+    <section class="contenedor_login">
         <br />
         email: <input type="text" v-model="usuario"><br />
         contraseña: <input type="password" v-model="contraseña"><br />

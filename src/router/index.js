@@ -5,8 +5,9 @@ import mujer from '../components/Mujer.vue'
 import joyas from '../components/Joyas.vue'
 import electronica from '../components/Electronica.vue'
 import producto from '../components/ProductoUnico.vue'
+import inicio_sesion from '../components/Inicio_sesion.vue'
 import carrito from '../components/Carrito.vue'
-import inicio_sesion from '../components/Inicio-sesion.vue'
+
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -35,13 +36,13 @@ const router = createRouter({
     name: 'producto',
     component: producto
     },
+    {path: '/inicio_sesion',
+    name: 'inicio_sesion',
+    component: inicio_sesion
+    },
     {path: '/carrito',
     name: 'carrito',
     component: carrito
-    },
-    {path: '/inicio-sesion',
-    name: 'inicio-sesion',
-    component: inicio_sesion
     },
   ]
 })

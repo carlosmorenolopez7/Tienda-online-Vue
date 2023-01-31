@@ -90,7 +90,7 @@ input:not(input[type="submit"]):valid{
   border-bottom: 1px solid green;
 }
 
-#enlace-secciones{
+#enlace_secciones{
   grid-column: 2 / 4;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
@@ -100,7 +100,7 @@ input:not(input[type="submit"]):valid{
   text-align: center;
 }
 
-.opciones-usuario{
+.opciones_usuario{
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   grid-template-rows: auto;
@@ -108,7 +108,7 @@ input:not(input[type="submit"]):valid{
   justify-items: center;
 }
 
-#inicio-sesion{
+#inicio_sesion{
   grid-column: 2 / 3;
   cursor: pointer;
   transition: all 1s;
@@ -120,7 +120,7 @@ input:not(input[type="submit"]):valid{
   transition: all 1s;
 }
 
-.finalizar-compra, .borrar-carrito{
+.finalizar_compra, .borrar_carrito{
   width: 120px;
   height: 40px;
   background-color: lightblue;
@@ -133,11 +133,11 @@ input:not(input[type="submit"]):valid{
   transition: all 0.5s ease;
 }
 
-.finalizar-compra, .borrar-carrito{
+.finalizar_compra, .borrar_carrito{
   width: 100%;
 }
 
-.contenedor-categorias{
+.contenedor_categorias{
   display: grid;
   grid-template-columns: repeat(10,1fr);
   grid-template-rows: 1fr;
@@ -158,7 +158,7 @@ input:not(input[type="submit"]):valid{
   align-items: center;
 }
 
-.titulo-seccion{
+.titulo_seccion{
   grid-column: 1 / 4;
   text-transform: capitalize;
   font-size: 40px;
@@ -178,36 +178,36 @@ input:not(input[type="submit"]):valid{
   border: 1px solid black;
 }
 
-.contenedor-imagen-producto,.contenedor-contenido-producto{
+.contenedor_imagen_producto,.contenedor_contenido_producto{
   display: flex;
   flex-direction: column;
 }
 
-.contenedor-imagen-producto{
+.contenedor_imagen_producto{
   grid-column: 1 / -1;
   grid-row: 1 / 2;
   align-self: center;
 }
 
-.imagen-producto{
+.imagen_producto{
   width: 50%;
   height: 50%;
   align-self: center;
   cursor: pointer;
 }
 
-.imagen-producto:hover{
+.imagen_producto:hover{
   transform: scale(1.2);
   transition: all 0.5s;
 }
 
-.contenedor-contenido-producto{
+.contenedor_contenido_producto{
   grid-column: 1 / -1;
   grid-row: 2 / 3;
   align-self: center;
 }
 
-.ver, .precio-producto{
+.ver, .precio_producto{
   align-self: center;
 }
 
@@ -227,7 +227,7 @@ input:not(input[type="submit"]):valid{
   background-color: green;
 }
 
-.contenedor-producto{
+.contenedor_producto{
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: 1fr;
@@ -236,20 +236,20 @@ input:not(input[type="submit"]):valid{
   margin-bottom: 10vh;
 }
 
-.producto-unico{
+.producto_unico{
   display: grid;
   grid-template-columns: repeat(2,1fr);
   grid-template-rows: repeat(5,min-content) 5vh;
 }
 
-.titulo-producto-unico{
+.titulo_producto_unico{
   grid-column: 1 / -1;
   grid-row: 1 / 2;
   justify-self: center;
   text-align: center;
 }
 
-.contenendor-imagen-producto-unico{
+.contenendor_imagen_producto_unico{
   grid-column: 1 / 2;
   grid-row: 2 / 6;
   display: flex;
@@ -257,28 +257,28 @@ input:not(input[type="submit"]):valid{
   justify-content: center;
 }
 
-.imagen-producto-unico{
+.imagen_producto_unico{
   width: 50%;
 }
 
-.categoria-producto-unico{
+.categoria_producto_unico{
   grid-column: 2 / 3;
   grid-row: 2 / 3;
   align-self: center;
   justify-self: center;
 }
 
-.descripcion-producto-unico{
+.descripcion_producto_unico{
   grid-column: 2 / 3;
   grid-row: 3 / 4;
 }
 
-.precio-producto-unico{
+.precio_producto_unico{
   grid-column: 2 / 3;
   grid-row: 4 / 5;
 }
 
-.caracteristicas-producto-unico{
+.caracteristicas_producto_unico{
   grid-column: 2 / 3;
   grid-row: 6 / 7;
   display: flex;
@@ -306,19 +306,19 @@ input:not(input[type="submit"]):valid{
   transform: scale(0.9);
 }
 
-.contenedor-carrito{
+.contenedor_carrito{
   display: grid;
   grid-template-columns: repeat(9,1fr);
   grid-template-rows: min-content min-content;
 }
 
-.carrito-titulo{
+.titulo_carrito{
   grid-column: 3 / 8;
   grid-row: 1 / 2;
   justify-self: center;
 }
 
-.carrito-contenido{
+.carrito_main{
   grid-column: 3 / 8;
   grid-row: 2 / -1;
   display: grid;
@@ -326,12 +326,12 @@ input:not(input[type="submit"]):valid{
   grid-column-gap: 10%;
 }
 
-.contenedor-productos-carrito{
+.productos_carrito{
   display: grid;
   grid-auto-rows: max-content;
 }
 
-.producto-carrito{
+.producto_carrito{
   display: grid;
   grid-template-columns: 1fr 2fr;
   grid-column-gap: 5%;
@@ -339,30 +339,30 @@ input:not(input[type="submit"]):valid{
   border-bottom: 1px solid gray;
 }
 
-.contenedor-imagen-producto-carrito{
+.contenedor_imagen_producto_carrito{
   grid-column: 1 / 2;
   align-self:  center;
   height: fit-content;
 }
 
-.imagen-producto-carrito{
+.imagen_producto_carrito{
   width: 100%;
 }
 
-.contenedor-informacion-producto-carrito{
+.contenedor_informacion_producto_carrito{
   grid-column: 2 / -1;
   display: grid;
   grid-template-columns: repeat(10,1fr);
   grid-template-rows: 1fr min-content;
 }
 
-.nombre-producto-carrito{
+.nombre_producto_carrito{
   grid-column: 1 / 6;
   grid-row: 1 / 2;
   font-size: 20px;
 }
 
-.contenedor-imagen-eliminar{
+.eliminar_producto{
   height: min-content;
   width: 20%;
   grid-column: 8 / -1;
@@ -370,59 +370,59 @@ input:not(input[type="submit"]):valid{
   justify-self: flex-end;
 }
 
-.imagen-eliminar{
+.imagen_eliminar{
   width: 100%;
   height: 100%;
 }
 
-.borrar-carrito{
+.borrar_carrito{
   margin-top: 1em;
 }
 
-.cantidad-producto-carrito-menos{
+.menos{
   grid-column: 1 / 2;
   grid-row: 2 / -1;
   justify-self: center;
 }
 
-.cantidad-producto-carrito-numero{
-  grid-column: 2 / 3;
-  grid-row: 2 / -1;
-  justify-self: center;
-}
-
-.cantidad-producto-carrito-mas{
+.mas{
   grid-column: 3 / 4;
   grid-row: 2 / -1;
   justify-self: center;
 }
 
-.precio-producto-carrito{
+.cantidad_productos{
+  grid-column: 2 / 3;
+  grid-row: 2 / -1;
+  justify-self: center;
+}
+
+.precio_productos{
   grid-column: 8 / -1;
   grid-row: 2 / -1;
   align-self: flex-end;
 }
 
-.precio-carrito{
+.precio_carrito{
   display: grid;
   grid-row-gap: 1.1em;
 }
 
-.suma-carrito{
+.suma_carrito{
   display: grid;
   grid-row-gap: 1.125em;
 }
 
-.subtotal-carrito-contenedor,.gastos-carrito-contenedor,.total-carrito-contenedor{
+.subtotal_carrito_contenedor,.gastos_carrito_contenedor,.total_carrito_contenedor{
   display: grid;
   grid-auto-flow: column;
 }
 
-.finalizar-compra{
+.finalizar_compra{
   margin-top: 2em;
 }
 
-.contenedor-login{
+.contenedor_login{
   display: grid;
   grid-auto-flow: column;
   grid-column-gap: 3%;

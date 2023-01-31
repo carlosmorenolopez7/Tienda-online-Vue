@@ -13,18 +13,18 @@ function enviarAlCArrito(){
 
 
 <template>
-<div class="contenedor-producto">
-      <section class="producto-unico">
-            <h1 class="titulo-producto-unico">{{ producto.nombre }}</h1>
-            <div class="contenendor-imagen-producto-unico">
-                  <img class="imagen-producto-unico" :src="producto.imagen">
+<div class="contenedor_producto">
+      <section class="producto_unico">
+            <h1 class="titulo_producto_unico">{{ producto.nombre }}</h1>
+            <div class="contenendor_imagen_producto_unico">
+                  <img class="imagen_producto_unico" :src="producto.imagen">
             </div>
-            <p class="descripcion-producto-unico">{{producto.descripcion}}</p>
-            <p class="precio-producto-unico">{{producto.precio}}</p>
-            <div class="caracteristicas-producto-unico">
-                  <div class="contenendor-cantidad-producto-unico">
+            <p class="descripcion_producto_unico">{{producto.descripcion}}</p>
+            <p class="precio_producto_unico">{{producto.precio}}</p>
+            <div class="caracteristicas_producto_unico">
+                  <div class="contenendor_cantidad_producto_unico">
                         <span>Cantidad: </span>
-                        <select class="cantidad-producto-unico" name="cantidad">
+                        <select class="cantidad_producto_unico">
                               <option value="1">1</option>
                               <option value="2">2</option>
                               <option value="3">3</option>
@@ -32,9 +32,9 @@ function enviarAlCArrito(){
                               <option value="5">5</option>
                         </select>
                   </div>
-                  <div class="contenendor-talla-producto-unico">
+                  <div class="contenendor_talla_producto_unico">
                         <span>Talla: </span>
-                        <select class="talla-producto-unico" name="talla">
+                        <select class="talla_producto_unico">
                               <option value="s">S</option>
                               <option value="m">M</option>
                               <option value="l">L</option>

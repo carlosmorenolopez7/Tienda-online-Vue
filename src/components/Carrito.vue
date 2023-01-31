@@ -14,34 +14,34 @@ function borrarCarrito(){
 </script>
 
 <template>
-<section class="contenedor-carrito">
-      <div class="carrito-titulo">
+<section class="contenedor_carrito">
+      <div class="titulo_carrito">
             <h1>Su Carrito</h1>
       </div>
-      <div class="carrito-contenido">
-            <section class="contenedor-productos-carrito">
+      <div class="carrito_main">
+            <section class="productos_carrito">
                   <productocarrito v-for="producto of carrito" :producto="producto" :carrito="carrito"></productocarrito>
             </section>
-            <section class="contenedor-informacion-carrito">
-                  <div class="precio-carrito">
-                        <div class="suma-carrito">
-                              <section class="subtotal-carrito-contenedor">
+            <section class="informacion_carrito">
+                  <div class="precio_carrito">
+                        <div class="suma_carrito">
+                              <section class="subtotal_carrito_contenedor">
                                     <span class="subtotal">Subtotal</span>
-                                    <span class="euro" value="${carrito.subtotal}">€</span>
+                                    <span class="precio" value="${carrito.subtotal}">€</span>
                               </section>
-                              <section class="gastos-carrito-contenedor">
+                              <section class="gastos_carrito_contenedor">
                                     <span class="gastos">Gastos</span>
-                                    <span class="euro">10.99€</span>
+                                    <span class="precio">10.99€</span>
                               </section>
                         </div>
-                        <div class="total-carrito-contenedor">
+                        <div class="total_carrito_contenedor">
                               <span class="total">Total</span>
-                              <span class="euro" value="${ carrito.total }">€</span>
+                              <span class="precio" value="${ carrito.total }">€</span>
                         </div>
                   </div>
-                  <div class="opciones-carrito">
-                        <button class="finalizar-compra">Finalizar Pedido</button>
-                        <button class="borrar-carrito" @click="borrarCarrito">Borrar carrito</button>
+                  <div class="opciones_carrito">
+                        <button class="finalizar_compra">Finalizar Pedido</button>
+                        <button class="borrar_carrito" @click="borrarCarrito">Borrar carrito</button>
                   </div>
             </section>
       </div>

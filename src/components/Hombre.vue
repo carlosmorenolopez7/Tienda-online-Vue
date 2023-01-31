@@ -10,10 +10,10 @@ function filtrarProductos(productos){
 </script>
 
 <template>
-<div class="contenedor-categorias">
+<div class="contenedor_categorias">
       <section class='vistas categoria'>
             <section class='cabecera'>
-                  <h1 class="titulo-seccion">Hombre</h1>
+                  <h1 class="titulo_seccion">Hombre</h1>
                   <div class="ordenar">
                         <span>Ordenar: </span>
                         <select class="order">
