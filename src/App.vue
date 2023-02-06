@@ -23,6 +23,9 @@ localStorage.carrito = JSON.stringify([]);
     <li class='hover vistas'>
       <router-link to="/electronica" value="electronica">Electronica</router-link>
     </li>
+    <li class='hover crear producto'>
+      <router-link to="/crearProducto" value="crearProducto">Crear Producto</router-link>
+    </li>
   </nav>
   <div class='opciones_usuario'>
     <router-link to="/inicio_sesion"><i class='fas fa-user' id='inicio_sesion'></i></router-link>

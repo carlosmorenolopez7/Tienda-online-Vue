@@ -7,6 +7,7 @@ import electronica from '../components/Electronica.vue'
 import producto from '../components/ProductoUnico.vue'
 import inicio_sesion from '../components/Inicio_sesion.vue'
 import carrito from '../components/Carrito.vue'
+import crearProducto from '../components/CrearProducto.vue'
 
 
 const router = createRouter({
@@ -43,6 +44,10 @@ const router = createRouter({
     {path: '/carrito',
     name: 'carrito',
     component: carrito
+    },
+    {path: '/crearProducto',
+    name: 'crearProducto',
+    component: crearProducto
     },
   ]
 })
